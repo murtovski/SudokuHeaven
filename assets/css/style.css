@@ -1,0 +1,49 @@
+.hidden {
+    display: none;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+#setup-game {
+    display: flex;
+    justify-content: center;
+}
+
+#setup-game > * {
+    margin-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    justify-self: center;
+}
+
+p#timer, p#lives {
+    font-size: .75rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+}
+
+#number-container > * {
+    border: 1px solid black;
+    border-radius: 20%;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+}
