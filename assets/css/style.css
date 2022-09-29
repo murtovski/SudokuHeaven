@@ -214,13 +214,13 @@ footer {
     }
 
     .tile {
-        border: 1px solid black;
-        width: 15px;
-        height: 15px;
+        border: 0.5px solid slategray;
+        width: 21px;
+        height: 21px;
         text-align: center;
         margin: 0px;
         vertical-align: middle;
-        font-size: 10pt;
+        font-size: 15pt;
     }
 
     #number-container>* {
