@@ -93,3 +93,11 @@ footer {
     background-color: lightblue;
     text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+
+    .game-board {
+        white-space: nowrap;
+    }
+    
+}
