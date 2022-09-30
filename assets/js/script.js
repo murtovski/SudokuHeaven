@@ -87,7 +87,7 @@ function generateBoard(board) {
             tile.addEventListener("click", function(){
                 if(!disableSelect){
                     //if the tile is already selected
-                    if(tile.className.contains("selected")){
+                    if(tile.classList.contains("selected")){
                         //then remove selected
                         tile.classList.remove("selected");
                         selectedTile = null;
@@ -138,7 +138,7 @@ function updateMove() {
             selectedTile = null;
 
             //Check if board is completed
-            if(checkDone()){
+            if(checkDone() === false){
                 endGame();
             }
 
@@ -251,8 +251,10 @@ function timeConversion(time) {
 function checkDone() {
     let tiles = qsa(".tile");
     for (let i = 0; i < tiles.length; i++){
-        if (tiles.textContent === "") return false;
-    else return true;
+        if (tiles[i].textContent === "") {
+            return false;
+        }
+        return true;
     }
 }
 
