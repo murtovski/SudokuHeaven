@@ -83,7 +83,27 @@ function generateBoard(board) {
             //Set tile text to correct number
             tile.textContent = board.charAt(i);
         } else {
-            //add event listener
+            //add event listener to tile
+            tile.addEventListener("click", function(){
+                if(!disableSelect){
+                    //if the tile is already selected
+                    if(tile.className.contains("selected")){
+                        //then remove selected
+                        tile.classList.remove("selected");
+                        selectedTile = null;
+                    }else {
+                        //deselect all other tiles
+                        for(let i = 0; i<81;i++){
+                            qsa(".tile")[i].classList.remove("seleted");
+                        }
+                        //add selection and update variable
+                        tile.classList.add("selected");
+                        selectedTile = tile;
+                        updateMove();
+                    }
+                }
+
+            })
         }
         //Assign tile id
         tile.id = idCount;
@@ -100,6 +120,85 @@ function generateBoard(board) {
         //Add tiles to board
         id("board").appendChild(tile);
     }
+}
+
+function updateMove() {
+    //if a tile and number is selected
+    if (selectedTile && selectedNum){
+        //set the tile to the correct number
+        selectedTile.textContent = selectedNum.textContent;
+        //if the number matches the corresponding number in the solution key
+        if (checkCorrect(selectedTile)){
+            //Deselect the tiles
+            selectedTile.classList.remove("selected");
+            selectedNum.classList.remove("selected");
+
+            //clear the selected variable
+            selectedNum = null;
+            selectedTile = null;
+
+            //Check if board is completed
+            if(checkDone()){
+                endGame();
+            }
+
+            //if the number does not match the solution key
+        }else{
+            //Disabling selecting new numbers for one second
+            disableSelect = true;
+            //make the tile turn red
+            selectedTile.classList.add("incorrect");
+            //Run in one second
+            setTimeout(function() {
+                //Subtract the lives by 1
+                lives --;
+                //If no lives left end the game
+                if(lives===0){
+                    endGame();
+                //else lives is not equal to zero
+                }else {
+                    //Update the lives text
+                    id("lives").textContent = "Lives Remaining: " + lives;
+                    //re-enable selecting numbers and tiles
+                    disableSelect = false;
+                }
+                //restore tile color and remove selected from both
+                selectedTile.classList.remove("incorrect");
+                selectedTile.classList.remove("selected");
+                selectedNum.classList.remove("selected");
+                //clear tile text and clear selected variable
+                selectedTile.textContent = "";
+                selectedTile = null;
+                selectedNum = null;
+            }, 1000)
+        }
+    }
+}
+
+function endGame(){
+    //disable moves and stop the timer
+    disableSelect = true;
+    clearTimeout(timer);
+    //display win or loss message
+    if (lives ===0 || timeRemaining === 0){
+        id("lives").textContent = "You Lost!";
+    }else {
+        id("lives").textContent = "You Won!";
+    }
+}
+
+function checkCorrect(tile){
+    //set solution based on difficulty selection
+    let solution;
+    if (id("easy").checked) {
+        solution = easy[1]
+    } else if (id("medium").checked) {
+        solution = medium[1];
+    } else solution = hard[1];
+
+    //if tiles number is equal to solution number
+    if(solution.charAt(tile.id)=== tile.textContent) return true;
+    else return false;
 }
 
 function clearPrevious() {
@@ -149,6 +248,13 @@ function timeConversion(time) {
     return minutes + ":" + seconds;
 }
 
+function checkDone() {
+    let tiles = qsa(".tile");
+    for (let i = 0; i < tiles.length; i++){
+        if (tiles.textContent === "") return false;
+    else return true;
+    }
+}
 
 
 
