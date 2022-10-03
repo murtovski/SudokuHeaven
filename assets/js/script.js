@@ -94,7 +94,7 @@ function generateBoard(board) {
                     }else {
                         //deselect all other tiles
                         for(let i = 0; i<81;i++){
-                            qsa(".tile")[i].classList.remove("seleted");
+                            qsa(".tile")[i].classList.remove("selected");
                         }
                         //add selection and update variable
                         tile.classList.add("selected");
