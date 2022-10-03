@@ -138,7 +138,7 @@ function updateMove() {
             selectedTile = null;
 
             //Check if board is completed
-            if(checkDone() === false){
+            if(checkDone()){
                 endGame();
             }
 
@@ -166,6 +166,7 @@ function updateMove() {
                 selectedTile.classList.remove("incorrect");
                 selectedTile.classList.remove("selected");
                 selectedNum.classList.remove("selected");
+                
                 //clear tile text and clear selected variable
                 selectedTile.textContent = "";
                 selectedTile = null;
@@ -180,7 +181,7 @@ function endGame(){
     disableSelect = true;
     clearTimeout(timer);
     //display win or loss message
-    if (lives ===0 || timeRemaining === 0){
+    if (lives === 0 || timeRemaining === 0){
         id("lives").textContent = "You Lost!";
     }else {
         id("lives").textContent = "You Won!";
@@ -251,11 +252,9 @@ function timeConversion(time) {
 function checkDone() {
     let tiles = qsa(".tile");
     for (let i = 0; i < tiles.length; i++){
-        if (tiles[i].textContent === "") {
-            return false;
-        }
-        return true;
+        if (tiles[i].textContent === "") return false;
     }
+    return true;
 }
 
 
