@@ -151,6 +151,14 @@ footer {
         align-items: center;
     }
 
+    .rightBorder {
+        border-right: 4px solid slategray;
+    }
+
+    .bottomBorder {
+        border-bottom: 4px solid slategray;
+    }
+
 
 }
 
@@ -193,6 +201,14 @@ footer {
         text-align: center;
     }
 
+    .rightBorder {
+        border-right: 4px solid slategray;
+    }
+
+    .bottomBorder {
+        border-bottom: 4px solid slategray;
+    }
+
 
 }
 
@@ -209,8 +225,8 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         align-content: flex-start;
-        width: 155px;
-        height: 155px;
+        width: 230px;
+        height: 230px;
     }
 
     .tile {
@@ -237,6 +253,14 @@ footer {
 
     header {
         font-size: 0.6rem;
+    }
+
+    .rightBorder {
+        border-right: 4px solid slategray;
+    }
+
+    .bottomBorder {
+        border-bottom: 4px solid slategray;
     }
 
 
