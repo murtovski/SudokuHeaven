@@ -1,15 +1,19 @@
 * {
     font-family: 'Courier New', Courier, monospace;
+    background-color: papayawhip;
 }
 
 .hidden {
     display: none;
 }
 
-header {
+header *{
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 1px solid red;
+}
+
+header div {
+    border-bottom: 1px solid slategray;
 }
 
 h1 {
@@ -19,7 +23,12 @@ h1 {
 
 #setup-game {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+#game-controls {
+    text-align: center;
+    border-bottom: 1px solid slategray;
 }
 
 #setup-game>* {
@@ -36,6 +45,12 @@ h1 {
 
 button {
     justify-self: center;
+}
+
+#start-btn{
+    border: 2px solid black;
+    border-radius: 20%;
+    margin-bottom: 20px;
 }
 
 p#timer,
@@ -151,6 +166,14 @@ footer {
         align-items: center;
     }
 
+    #game-controls > *{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
     .rightBorder {
         border-right: 4px solid slategray;
     }
@@ -253,6 +276,14 @@ footer {
 
     header {
         font-size: 0.6rem;
+    }
+
+    #game-controls {
+        font-size: 0.6rem;
+    }
+    
+    #game-controls div {
+        padding-left: 0;
     }
 
     .rightBorder {
