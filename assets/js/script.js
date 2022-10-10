@@ -36,10 +36,10 @@ window.onload = function () {
                     //Then remove selection
                     this.classList.remove("selected");
                     selectedNum = null;
-                }else //deselect all other numbers
-                for (let i =0; i < 9; i++){
-                    id("number-container").children[i].classList.remove("selected");
-                }
+                } else //deselect all other numbers
+                    for (let i = 0; i < 9; i++) {
+                        id("number-container").children[i].classList.remove("selected");
+                    }
                 //select it and update selectedNum Variable
                 this.classList.add("selected");
                 selectedNum = this;
@@ -52,6 +52,9 @@ window.onload = function () {
 function startGame() {
     //Choose board difficulty
     let board;
+    if (id("lives").classList.contains("incorrect")){
+        id("lives").classList.remove("incorrect");
+    }
     if (id("easy").checked) {
         board = easy[0]
     } else if (id("medium").checked) {
@@ -84,16 +87,16 @@ function generateBoard(board) {
             tile.textContent = board.charAt(i);
         } else {
             //add event listener to tile
-            tile.addEventListener("click", function(){
-                if(!disableSelect){
+            tile.addEventListener("click", function () {
+                if (!disableSelect) {
                     //if the tile is already selected
-                    if(tile.classList.contains("selected")){
+                    if (tile.classList.contains("selected")) {
                         //then remove selected
                         tile.classList.remove("selected");
                         selectedTile = null;
-                    }else {
+                    } else {
                         //deselect all other tiles
-                        for(let i = 0; i<81;i++){
+                        for (let i = 0; i < 81; i++) {
                             qsa(".tile")[i].classList.remove("selected");
                         }
                         //add selection and update variable
@@ -124,11 +127,11 @@ function generateBoard(board) {
 
 function updateMove() {
     //if a tile and number is selected
-    if (selectedTile && selectedNum){
+    if (selectedTile && selectedNum) {
         //set the tile to the correct number
         selectedTile.textContent = selectedNum.textContent;
         //if the number matches the corresponding number in the solution key
-        if (checkCorrect(selectedTile)){
+        if (checkCorrect(selectedTile)) {
             //Deselect the tiles
             selectedTile.classList.remove("selected");
             selectedNum.classList.remove("selected");
@@ -138,25 +141,25 @@ function updateMove() {
             selectedTile = null;
 
             //Check if board is completed
-            if(checkDone()){
+            if (checkDone()) {
                 endGame();
             }
 
             //if the number does not match the solution key
-        }else{
+        } else {
             //Disabling selecting new numbers for one second
             disableSelect = true;
             //make the tile turn red
             selectedTile.classList.add("incorrect");
             //Run in one second
-            setTimeout(function() {
+            setTimeout(function () {
                 //Subtract the lives by 1
-                lives --;
+                lives--;
                 //If no lives left end the game
-                if(lives===0){
+                if (lives === 0) {
                     endGame();
-                //else lives is not equal to zero
-                }else {
+                    //else lives is not equal to zero
+                } else {
                     //Update the lives text
                     id("lives").textContent = "Lives Remaining: " + lives;
                     //re-enable selecting numbers and tiles
@@ -166,7 +169,7 @@ function updateMove() {
                 selectedTile.classList.remove("incorrect");
                 selectedTile.classList.remove("selected");
                 selectedNum.classList.remove("selected");
-                
+
                 //clear tile text and clear selected variable
                 selectedTile.textContent = "";
                 selectedTile = null;
@@ -176,19 +179,20 @@ function updateMove() {
     }
 }
 
-function endGame(){
+function endGame() {
     //disable moves and stop the timer
     disableSelect = true;
     clearTimeout(timer);
     //display win or loss message
-    if (lives === 0 || timeRemaining === 0){
+    if (lives === 0 || timeRemaining === 0) {
+        id("lives").classList.add("incorrect");
         id("lives").textContent = "You Lost!";
-    }else {
+    } else {
         id("lives").textContent = "You Won!";
     }
 }
 
-function checkCorrect(tile){
+function checkCorrect(tile) {
     //set solution based on difficulty selection
     let solution;
     if (id("easy").checked) {
@@ -198,7 +202,7 @@ function checkCorrect(tile){
     } else solution = hard[1];
 
     //if tiles number is equal to solution number
-    if(solution.charAt(tile.id)=== tile.textContent) return true;
+    if (solution.charAt(tile.id) === tile.textContent) return true;
     else return false;
 }
 
@@ -230,12 +234,12 @@ function startTimer() {
     else timeRemaining = 600;
 
     //sets timer for first second
-    id("timer").textContent = timeConversion(timeRemaining);
+    id("timer").textContent = "Time remaining: " + timeConversion(timeRemaining);
     //sets timer to update every second
     timer = setInterval(function () {
         timeRemaining--;
         if (timeRemaining === 0) endGame();
-        id("timer").textContent = timeConversion(timeRemaining);
+        id("timer").textContent = "Time remaining: " + timeConversion(timeRemaining);
     }, 1000)
 
 }
@@ -251,7 +255,7 @@ function timeConversion(time) {
 
 function checkDone() {
     let tiles = qsa(".tile");
-    for (let i = 0; i < tiles.length; i++){
+    for (let i = 0; i < tiles.length; i++) {
         if (tiles[i].textContent === "") return false;
     }
     return true;

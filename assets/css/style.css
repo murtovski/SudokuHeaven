@@ -7,7 +7,7 @@
     display: none;
 }
 
-header *{
+header * {
     text-align: center;
     padding-bottom: 10px;
 }
@@ -39,23 +39,44 @@ h1 {
     align-items: center;
 }
 
+#stats >* {
+    font-size: 1.5rem;
+}
+
 .diff-radio {
     margin-right: 15px;
+    cursor: pointer;
 }
 
 button {
     justify-self: center;
 }
 
-#start-btn{
+#start-btn {
+    background-color: rgb(187, 94, 28);
     border: 2px solid black;
     border-radius: 20%;
     margin-bottom: 20px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: rgb(230, 141, 100);
+    text-decoration: underline;
+}
+
+#stats{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
 }
 
 p#timer,
 p#lives {
-    font-size: .75rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
 }
@@ -75,6 +96,10 @@ p#lives {
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
+}
+
+#number-container>*:hover{
+    background-color: aliceblue;
 }
 
 #board {
@@ -98,7 +123,15 @@ p#lives {
     font-size: 40pt;
 }
 
+.tile:hover{
+    background-color: aliceblue;
+}
+
 p.selected {
+    background-color: lightblue;
+}
+
+p.selected:hover {
     background-color: lightblue;
 }
 
@@ -166,7 +199,7 @@ footer {
         align-items: center;
     }
 
-    #game-controls > *{
+    #game-controls>* {
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
@@ -281,7 +314,7 @@ footer {
     #game-controls {
         font-size: 0.6rem;
     }
-    
+
     #game-controls div {
         padding-left: 0;
     }
