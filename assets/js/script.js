@@ -234,12 +234,16 @@ function startTimer() {
     else timeRemaining = 600;
 
     //sets timer for first second
-    id("timer").textContent = "Time remaining: " + timeConversion(timeRemaining);
+    id("timer").textContent = "Time Remaining: " + timeConversion(timeRemaining);
+    if(id("new-game").classList.contains("hidden")){
+        id("new-game").classList.remove("hidden");
+    }
     //sets timer to update every second
     timer = setInterval(function () {
         timeRemaining--;
         if (timeRemaining === 0) endGame();
-        id("timer").textContent = "Time remaining: " + timeConversion(timeRemaining);
+        id("timer").textContent = "Time Remaining: " + timeConversion(timeRemaining);
+        id("new-game").classList.add("hidden");
     }, 1000)
 
 }
