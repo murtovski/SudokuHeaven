@@ -105,74 +105,15 @@ The header is a simple logo and title. I found a cool font that suited the style
 
 For responsiveness, I simply scaled down the game board size to allow for gaming on smaller viewports.
 
-You can find the images used for all pages below:
 
-<details>
-    <summary>Home</summary>
-    <img src="docs/features/hero-image.jpeg" alt="Hero image used for the Home Page">
-</details>
+### Colors 
 
-<details>
-    <summary>About, Coaching, Gallery, and Contact</summary>
-    <img src="docs/features/hero-small-image.png" alt="Hero image used for the About, Coaching, Gallery, and Contact pages">
-</details>
-
-<details>
-    <summary>404</summary>
-    <img src="docs/features/404.jpeg" alt="Hero image used for the Error 404 page">
-</details>
-
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/features/thank-you.jpeg" alt="Hero image used for the Thank You page">
-</details>
-
-### Colours 
-
-No pre-set colour palettes were used in the designing of this website. My goal was to create a monochromatic look, focusing mostly using shades of black, white, and grey. My vision was to have the site feel simple, clean, and elegant. [Color-Name](https://www.color-name.com/) was used to find slightly lighter and darker shade variations of the colours used for this project. The body content is primarily grey text on a white background with black titles, sometimes being inverted to white for sections that rely on background images. 
+I used a rgb value for the background color of the entire page. I wanted an off-white color that would almost look like the color of an old newspaper where you would find a game of sudoku. The font color is black like standard ink that would be used to print the paper, the only real stand-out colors used are red coloring for the 'new game' button and the flashing text that appears when it is pressed. I used the red coloring to make it clear to the user that the game is on!
 
 ### Fonts
 
-The fonts I chose for this project are Lato and Railway. Lato is the font for the general content, whereas Railway is used for title content. They complement each other well and they were chosen because they were recommended by [this website](https://www.coralnodes.com/best-google-font-combinations/). I also considered a combination of Montserrat and Source Sans Pro, which evoke a similar sense of simplicity and elegance. However, I ultimately chose to go with Lato and Railway due to how well Railway works with letter spacing. It is a modern and clean approach, which I believe works well for almost any website.
+The font that was used for the entire page is the 'Courier New' font style. It did not need to be downloaded or added from google fonts. I chose this font because it gave me the feeling that it had been typed on a newspaper or puzzle book, so I felt like it fitted right in with the design. It is an added bonus that the font did not need additional code to use.
 
-Font-weights of 300, 400, and 700 were chosen for both fonts. 300 was used as the default for both. 400 was used for a bit more weight and clarity, and 700 was used in rare cases where a bold or strong element was required for the text.
-
-Normally, one would associate big and powerful fonts and font-weights with gyms and working out. However, I wanted to adhere to my initial vision in designing a clean and elegant website. This represents my core values better as well as reinforcing the idea that the gym is clean and well-maintained, and the coaches are elegant and well-spoken.
-
-### Wireframes
-
-The conceptualisation of the layout used in this project began with simple pen and paper sketches, which were then transformed into wireframes via Balsamiq. Everything shown here is a rough beta of the layout, some of which has changed during development.
-
-This is the prototype of the project, which changes over the course of project development.
-
-<details>
-    <summary>Home</summary>
-    <img src="docs/wireframes/home.png" alt="Wireframe of the Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/wireframes/about.png" alt="Wireframe of the About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/wireframes/coaching.png" alt="Wireframe of the Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/wireframes/gallery.png" alt="Wireframe of the Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/wireframes/contact.png" alt="Wireframe of the Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/wireframes/thank-you.png" alt="Wireframe of the Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/wireframes/404.png" alt="Wireframe of the 404 page">
-</details>
 
 [Back to top &uarr;](#victory-fitness)
 <hr>
@@ -183,57 +124,11 @@ This is the prototype of the project, which changes over the course of project d
 
 ![Navigation Bar](docs/features/navigation-bar.png)
 
-Every single page on the website has this Navigation Bar at the very top. Due to the darker hero-images behind it, it is easy to see even if the bar itself is fully transparent. It is very simple and intuitive, focusing primarily on the function of allowing users to effectively navigate the website. The current page is highlighted in a white brighter than the rest of the links, which are displayed in a more grey colour. The Victory Fitness logo is a link that re-directs the user to the Home page. For smaller viewports, a hamburger menu appears with a black background, to make the links easier to see and interact with. This makes it fully responsive across all viewports.
+The header of the page shows the page title and logo let the user know what the page is all about. There is no navigation bar added to the header. I wanted this page to be all about the game board and the game of sudoku itself.
 
-![Hero Image - Home](docs/features/hero-image.jpeg)
-
-This hero image is the foundation upon which the entire website was built. It perfectly encapsulates the brand and vision of Victory Fitness in a single image. It is the very first thing new users see, and ultimately is the deciding factor in whether new users will continue to interact and explore or click off the website. First impressions hold a lot of power and that's why a good first impression is incredibly important. This is a crop of a full image that puts focus on the white letter "V" with the red logo V itself, which draws the user's attention towards the middle of the screen. This is further enhanced by the two coaches standing side by side, making sure the user's eyes do not stray from where they are visually directed. That brings the user to the Victory Fitness text logo, and subsequently, the address of the gym. With just one look, in a matter of seconds, the brand and reputation of the gym is established. This allows the user to form an impression, as well as understand where the gym is located. Further, a ‘Call to Action’ button is located under the address, which brings them to the Contact page, where they can avail of a 7-Day Free Trial.
-
-![Home Page - First Half](docs/features/home-part1.png)
-
-The first half of the Home page is a relatively simple section as it offers the user a bit more information about the gym, its ethos, and the services being offered. The full-width image is used to great effect in creating contrast between the white sections above and below. This also helps to break up the text-only content. A button is also present, which inverts its colour schemes upon interaction, giving the user a direct means of accessing the coaching page.
-
-![Home Page - Second Half](docs/features/home-part2.png)
-
-The second half of the Home page continues the brief introductory content of the first half, providing reasons as to why this gym is worth choosing. This was a direct request from Ronan Kiely, who believes in selling what makes your gym and services special. He dislikes transformation pictures as they tend to convey to the user that the only thing that matters is the end results. However, Ronan feels that there is so much more to it than that – for instance, the journey, the starting point, and the struggles. For this reason, there's no section showing transformations or successes. They may bring great business, but this brand prefers to focus on other aspects of their clients’ fitness journeys.
-
-Below that, there is another section with a full-width background image that helps to break up the text whilst simultaneously showcasing the gym. This section informs the user of a 7-day no commitment free trial, with a ‘Call to Action’ button below that brings them to the Contact page where they can learn more.
 
 ![Footer](docs/features/footer.png)
 
-Like the Navigation Bar, the Footer is present across all pages. It is fully responsive across all viewports and houses three icons that provide links to Victory Fitness's social media accounts and email. These buttons change colour upon interaction, and the links all open in a new page so the user isn't forced to leave the website and can continue exploring. Below these icons is a line of text that describes Victory Fitness as the copyright holder for this website.
-
-![Hero Image - Other](docs/features/hero-small-image.png)
-
-As mentioned earlier, the About, Coaching, Gallery, and Contact pages utilise a much shorter hero image. This is to bring the user to the page content quickly and to make navigation more fluid, as having to navigate a full-height viewport image when loading each page can be cumbersome. This section also serves as a darker backdrop for the transparent navigation bar and houses location title text within, informing the user of the section.
-
-![About](docs/features/about.png)
-
-The About page provides the user with a detailed history of Victory Fitness, a more in-depth dive into their ethos as a gym and coaching service, which is supported by a photograph of the two coaches in the gym. The text content here uses the same amount of width as the image, providing a very fluid reading experience.
-
-![Coaching](docs/features/coaching.png)
-
-The Coaching page delves into greater depth regarding the coaching services offered. It's broken up into three sections: 1) Premium Coaching, 2) Semi-private Coaching, and 3) Online Coaching. Each of these sections has a photograph accompanying them. This helps to break up the text and prevents information overload. Consistent with the About page, the width of the text content never exceeds the width used by the images.
-
-![Gallery](docs/features/gallery.png)
-
-The Gallery page is dedicated to showcasing the gym and all of the available equipment and facilities, allowing the users to see the gym for themselves through the professional photographs. The images are displayed in two columns and are fully responsive across all viewports, shrinking down to one column as the viewport grows narrower. 
-
-![Contact - Form](docs/features/contact.png)
-
-The Contact page allows users to get in touch with Victory Fitness directly via filling out the online form. Users are also educated about the free trial and can avail of it through the form. The form has both labels and placeholder text in place, ensuring both accessibility and clarity. A line of text below the form-fields informs the user that all fields are required to be filled for the form to be successfully submitted. The details submitted are not stored, as the user is simply redirected to the Thank You page.
-
-![Contact - Map](docs/features/google-map.png)
-
-The Google Maps section of the Contact page informs users of where the gym is located, should they want to see it first-hand. Photographs are beneficial but seeing the location in person is preferred. A face-to-face conversation with one of the coaches is also a possibility, which tend to be a bit more personal, warmer, and more comfortable than online correspondence. The embed for this maps section is provided by Google itself. Unfortunately, the Google Maps section didn't make it into the final build. It was instead replaced by a static image of the location due to major performance issues.
-
-![Thank You](docs/features/thank-you.jpeg)
-
-After successful completion of the form on the Contact page, the user is redirected to this page. This contains a simple ‘Thank You’ message that lets them know their message was received successfully and someone will be in touch with them shortly. Any details submitted are not stored. This page employs the same sort of approach as the Home page, using a full-screen hero image with text overlayed on top of it. It differs in that the opacity is increased to 50% to bring the viewer's attention to the message.
-
-![Error 404](docs/features/404.jpeg)
-
-Should the user navigate to a page that doesn't exist, an HTTP 404 error will occur. Upon doing so, the 404 Page will be loaded, informing the user that this page does not exist. All the usual means of navigation are present in the Navigation Bar and the Footer, but with the addition of a button to take them home. This is located under the error text. This page employs the same approach as both the Home and Thank You pages, using a full-screen hero image with text overlayed on top of it.
 
 ![Favicon](docs/features/favicon.png)
 
@@ -248,43 +143,13 @@ As with all websites, this one also has a favicon that is displayed beside the t
 
 [W3C Markup Validation Service](https://validator.w3.org/nu/) was used to validate HTML code. No errors were found. Please see the summaries below for the results.
 
-<details>
-    <summary>Home</summary>
-    <img src="docs/validation/home-validation.png" alt="Validation of Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/validation/about-validation.png" alt="Validation of About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/validation/coaching-validation.png" alt="Validation of Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/validation/gallery-validation.png" alt="Validation of Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/validation/contact-validation.png" alt="Validation of Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/validation/thank-you-validation.png" alt="Validation of Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/validation/404-validation.png" alt="Validation of 404 page">
-</details>
+
 
 ### CSS Validation
 
 [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate CSS code. No errors were found. 
 
-<details>
-    <summary>Style Page</summary>
-    <img src="docs/validation/css-validation.png" alt="Validation of the CSS Style page">
-</details>
+
 
 [Back to top &uarr;](#victory-fitness)
 <hr>
