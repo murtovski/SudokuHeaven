@@ -14,7 +14,7 @@ body {
 #new-game {
     font-size: 1.25rem;
     text-align: center;
-    color: red;
+    color: #e12727;
     font-weight: bold;
 }
 
@@ -27,9 +27,99 @@ header div {
     border-bottom: 1px solid slategray;
 }
 
+.head-bar {
+    display: flex;
+    align-content: center;
+    justify-content:center;
+    align-items: center;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: bold;
+}
+
+.help-button {
+    clear: both;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: #e12727;
+    border-radius: 50px;
+    border: 3px solid black;
+}
+
+.help-button:hover {
+    background-color: #fa0202;
+    text-decoration: underline;
+}
+
+.help-button-container {
+    margin-bottom: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background: slategray;
+    border-radius: 5px;
+    width: 600px;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.wrapper .close {
+    position: absolute;
+    bottom: 25px;
+    right: 40px;
+    transition: all 200ms;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e12727;
+}
+
+.wrapper .close:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.wrapper .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.container {
+    padding-bottom: 10px;
+}
+
+.content h2 {
+    text-align: center;
+}
+
+.content a {
+    text-align: center;
+    padding: 20px 0;
 }
 
 #setup-game {
@@ -60,9 +150,9 @@ button {
 }
 
 #start-btn {
-    background-color: rgb(42 160 195);
+    background-color: #e12727;
     border: 3px solid black;
-    border-radius: 54%;
+    border-radius: 50px;
     margin-bottom: 20px;
     transition-duration: 0.4s;
     text-decoration: none;
@@ -75,14 +165,14 @@ button {
 }
 
 #start-btn:hover {
-    background-color: rgb(126, 216, 243);
+    background-color: #fa0202;
     text-decoration: underline;
 }
 
 #stats {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 50px 10%;
 }
 
 p#timer,
@@ -207,6 +297,11 @@ footer div {
         margin: 0px;
         vertical-align: middle;
         font-size: 30pt;
+    }
+    #stats {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
     }
 
     #number-container>* {

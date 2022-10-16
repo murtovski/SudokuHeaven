@@ -11,10 +11,11 @@
     <title>Sudoku Heaven</title>
 </head>
 <header>
-    <div>
+    <div class="head-bar">
         <h1>Sudoku <span><i class="fa-solid fa-puzzle-piece"></i></span> Heaven</h1>
     </div>
 </header>
+
 
 <body>
     <section id="game-controls">
@@ -39,6 +40,8 @@
             </div>
         </div>
         <button id="start-btn">Create New Game!</button>
+        <hr style="visibility: hidden;">
+        <div class="help-button-container"><a href="#div-one" class="help-button">How to play!</a></div>
     </section>
     <section>
         <div id="stats">
@@ -61,6 +64,23 @@
             </div>
         </div>
     </section>
+    <div class="overlay" id="div-one">
+        <div class="wrapper">
+            <div class="content">
+                <div class="container">
+                    <h2>How to play:</h2>
+                    <ul>
+                        <li>Find a way to fill all boxes with numbers between 1 and 9</li>
+                        <li>Each row, column and 9 by 9 box can only have one instance of each number</li>
+                        <li>The correct move must be made or you lose a life</li>
+                        <li>Fill all boxes in the alotted Time</li>
+                        <li>Good luck!</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
     <footer>
         <div>
             <p>Made By Aaron Murtagh</p>
