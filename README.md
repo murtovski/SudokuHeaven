@@ -176,7 +176,7 @@ Below are the results for every page, with no errors present (aside from the dis
 
 ### Performance
 
-Google Lighthouse was used to assess the performance of the webpage. Initially it scored an 84 in accessibility, on inspection I found a missing label for a radio button so I rectified that.
+Google Lighthouse was used to assess the performance of the webpage. Initially it scored an 84 in accessibility, on inspection I found a missing label for a radio button so I rectified that. There was also a deduction for not using a descending system for a heading tag that was used.
 
 The results can be seen below.
 
