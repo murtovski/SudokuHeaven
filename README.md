@@ -124,15 +124,19 @@ The font that was used for the entire page is the 'Courier New' font style. It d
 
 ![Navigation Bar](docs/features/navigation-bar.png)
 
-The header of the page shows the page title and logo let the user know what the page is all about. There is no navigation bar added to the header. I wanted this page to be all about the game board and the game of sudoku itself.
+The header of the page shows the page title and logo let the user know what the page is all about. There is no navigation bar added to the header. I wanted this page to be all about the game board and the game of sudoku itself. The header consists of a the title of the page along with a puzzle piece logo icon.
 
 
 ![Footer](docs/features/footer.png)
-
+The footer is a sign off for the game, again I designed the page to show and play a game of sudoku and wanted to display a simple and easy design for the user.
 
 ![Favicon](docs/features/favicon.png)
 
 As with all websites, this one also has a favicon that is displayed beside the title of the page. A user can discern what pages they have opened or are currently viewing by simply glancing at the tabs and titles.
+
+![game-controls]()
+The game controls contain the different elements to control the difficulty and duration of the game. There are 3 difficulties starting at easy and 3 time settings to give the user a better chance to complete the game. I created two buttons, a start button to create a new board depending on the difficulty of the game. When this button is pressed, "new game" will flash on the board to show the user the board has been set. There is also a help button that will display a window with rules for sudoku and how to play. This can then be closed to continue the game.
+
 
 [Back to top &uarr;](#victory-fitness)
 <hr>
