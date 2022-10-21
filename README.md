@@ -173,69 +173,14 @@ Additionally, the address below the text-logo as well as the button on the Home 
 
 Below are the results for every page, with no errors present (aside from the disregarded contrast ones):
 
-<details>
-    <summary>Home</summary>
-    <img src="docs/testing/wave-home.png" alt="Accessibility of Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/testing/wave-about.png" alt="Accessibility of About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/testing/wave-coaching.png" alt="Accessibility of Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/testing/wave-gallery.png" alt="Accessibility of Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/testing/wave-contact.png" alt="Accessibility of Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/testing/wave-thank-you.png" alt="Accessibility of Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/testing/wave-404.png" alt="Accessibility of 404 page">
-</details>
 
 ### Performance
 
-Google Lighthouse was used to assess the performance of all webpages. All pages have a score of 100 Accessibility, 100 Best Practices, and 100 SEO across all devices. However, Performance seems to fluctuate between 72-95 for all pages. Multiple browsers have been used incognito to disable any extensions that could be potentially hindering performance. I investigated this, finding that webpages that had scores of 100 Performance also seemed to produce different results when I tested the websites on my end. Regardless, all webpages have been optimised for load speed and performance, netting in 85-92 scores across the board without any cherry-picking.
+Google Lighthouse was used to assess the performance of the webpage. Initially it scored an 84 in accessibility, on inspection I found a missing label for a radio button so I rectified that.
 
 The results can be seen below.
 
-<details>
-    <summary>Home</summary>
-    <img src="docs/testing/lighthouse-home.png" alt="Performance of Home page">
-</details>
-<details>
-    <summary>About</summary>
-    <img src="docs/testing/lighthouse-about.png" alt="Performance of About page">
-</details>
-<details>
-    <summary>Coaching</summary>
-    <img src="docs/testing/lighthouse-coaching.png" alt="Performance of Coaching page">
-</details>
-<details>
-    <summary>Gallery</summary>
-    <img src="docs/testing/lighthouse-gallery.png" alt="Performance of Gallery page">
-</details>
-<details>
-    <summary>Contact</summary>
-    <img src="docs/testing/lighthouse-contact.png" alt="Performance of Contact page">
-</details>
-<details>
-    <summary>Thank You</summary>
-    <img src="docs/testing/lighthouse-thank-you.png" alt="Performance of Thank You page">
-</details>
-<details>
-    <summary>404</summary>
-    <img src="docs/testing/lighthouse-404.png" alt="Performance of 404 page">
-</details>
+
 
 ### Device Testing
 
