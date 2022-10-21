@@ -115,30 +115,36 @@ I used a rgb value for the background color of the entire page. I wanted an off-
 The font that was used for the entire page is the 'Courier New' font style. It did not need to be downloaded or added from google fonts. I chose this font because it gave me the feeling that it had been typed on a newspaper or puzzle book, so I felt like it fitted right in with the design. It is an added bonus that the font did not need additional code to use.
 
 
-[Back to top &uarr;](#victory-fitness)
+[Back to top &uarr;]
 <hr>
 
 ## Features
 
 ### Navigation Bar
 
-![Navigation Bar](docs/features/navigation-bar.png)
+![Header](assets/images/heading.png)
 
 The header of the page shows the page title and logo let the user know what the page is all about. There is no navigation bar added to the header. I wanted this page to be all about the game board and the game of sudoku itself. The header consists of a the title of the page along with a puzzle piece logo icon.
 
 
-![Footer](docs/features/footer.png)
+![Footer](assets/images/footer.png)
 The footer is a sign off for the game, again I designed the page to show and play a game of sudoku and wanted to display a simple and easy design for the user.
 
-![Favicon](docs/features/favicon.png)
+![Favicon](assets/images/favicon.ico)
 
-As with all websites, this one also has a favicon that is displayed beside the title of the page. A user can discern what pages they have opened or are currently viewing by simply glancing at the tabs and titles.
+As with all websites, this one also has a favicon that is displayed beside the title of the page. I used a simple puzzle piece to add to the theme of the site.
 
-![game-controls]()
+![game-controls](assets/images/game-control.png)
 The game controls contain the different elements to control the difficulty and duration of the game. There are 3 difficulties starting at easy and 3 time settings to give the user a better chance to complete the game. I created two buttons, a start button to create a new board depending on the difficulty of the game. When this button is pressed, "new game" will flash on the board to show the user the board has been set. There is also a help button that will display a window with rules for sudoku and how to play. This can then be closed to continue the game.
 
+![Game-Board](assets/images/game-board.png)
+The game board is created completely through the Javascript working behind the scenes. Once the start button has been pressed, a function is called where the board is cleared, if one exists, and a new board is created using a for loop. It loops 81 times, filling certain tiles with numbers depending on the difficulty and assigning each tile an id. The game board responds to a hover, and will allow only one number as a correct answer. If the answer is incorrect then the lives remaining counter will drop. The number indicating bar on the right is used to fill the fields of the game board. Once the game ends, the javascript will disable all further moves until andother game is started.
 
-[Back to top &uarr;](#victory-fitness)
+![Help](assets/images/help-window.png)
+For any user that is new to sudoku, I added a help window to give an outline of the rules for the game. This window has a close button that will exit the window once the user is finished reading.
+
+
+[Back to top &uarr;]
 <hr>
 
 ## Validation
