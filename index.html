@@ -17,14 +17,18 @@
 
 
 <body>
+    <!-- Header bar and logo start -->
     <header>
         <div class="head-bar">
             <h1>Sudoku <span><i class="fa-solid fa-puzzle-piece"></i></span> Heaven</h1>
         </div>
     </header>
+    <!-- Header bar and logo ends -->
+    <!-- Game controls section start -->
     <section id="game-controls">
         <h2>Game Controls</h2>
         <div id="setup-game">
+            <!-- Difficulty Radio button group -->
             <div id="diff">
                 <h3>Choose Difficulty: </h3>
                 <label for="easy">Easy</label>
@@ -34,6 +38,7 @@
                 <label for="hard" >Hard</label>
                 <input type="radio" name="diff" id="hard" class="diff-radio">
             </div>
+            <!-- Time selection Radio button group -->
             <div id="time">
                 <h3>Choose Time: </h3>
                 <label for="time-short">3 Min</label>
@@ -44,16 +49,21 @@
                 <input type="radio" name="time" id="time-long" class="diff-radio">
             </div>
         </div>
+        <!-- Buttons to start the game and display a help window -->
         <button id="start-btn">Create New Game!</button>
         <hr style="visibility: hidden;">
         <div class="help-button-container"><a href="#div-one" class="help-button">How to play!</a></div>
     </section>
-    <section>
+    <!-- Game controls section end -->
+    <!-- Game board section start -->
+    <section id="game-board-section">
+        <!-- Display the game information and time remaining -->
         <div id="stats">
             <p id="timer">Time Remaining: </p>
             <p id="flash"><span id="new-game" class="hidden">New Game!</span></p>
             <p id="lives">Lives Remaining: </p>
         </div>
+        <!-- The div that will contain the game board once it is generated -->
         <div id="game">
             <div id="board" class="game-board"></div>
             <div id="number-container" class="hidden">
@@ -69,6 +79,8 @@
             </div>
         </div>
     </section>
+    <!-- Game board section end -->
+    <!-- Containers for the help section that will display once the help button is pressed -->
     <div class="overlay" id="div-one">
         <div class="wrapper">
             <div class="content">
@@ -86,12 +98,12 @@
             <a href="#" class="close">Close</a>
         </div>
     </div>
+
+    <!-- Footer start -->
     <footer>
         <div>
             <p>Made By Aaron Murtagh</p>
         </div>
     </footer>
 </body>
-
-
 </html>
