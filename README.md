@@ -129,7 +129,7 @@ The header of the page shows the page title and logo let the user know what the 
 ![Footer](assets/images/footer.png)
 The footer is a sign off for the game, again I designed the page to show and play a game of sudoku and wanted to display a simple and easy design for the user.
 
-![Favicon](assets/images/favicon.ico)
+![Favicon](assets/images/icon.png)
 
 As with all websites, this one also has a favicon that is displayed beside the title of the page. I used a simple puzzle piece to add to the theme of the site.
 
