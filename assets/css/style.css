@@ -30,7 +30,7 @@ header div {
 .head-bar {
     display: flex;
     align-content: center;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -81,20 +81,61 @@ h1 {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
+    transition: 1s ease-in;
     transition: opacity 500ms;
-}
-
-.invisible {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.visible {
     visibility: visible;
     opacity: 1;
 }
 
-.overlay:target{
+.first-name,
+.last-name {
+    margin: 10px 20px;
+}
+
+form>label {
+    width: 110px;
+    margin-left: 25% !important;
+}
+
+.first-name {
+    display: inline-block;
+}
+
+.last-name {
+    display: inline-block;
+}
+
+#welcome {
+    text-align: center;
+    color: #e12727;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+#submit-button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: #e12727;
+    border-radius: 50px;
+    border: 3px solid black;
+    position: relative;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%, -0%);
+    margin: 20px;
+}
+
+#welcome * {
+    display: block;
+    font-weight: bolder;
+}
+
+.overlay:target {
     visibility: visible;
     opacity: 1;
 }
@@ -107,6 +148,21 @@ h1 {
     width: 600px;
     position: relative;
     transition: all 5s ease-in-out;
+}
+
+.close-welcome {
+    transition: all 200ms;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e12727;
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+
+.close-welcome:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .wrapper .close {
@@ -272,7 +328,7 @@ p.incorrect {
 }
 
 footer {
-    background-color: rgb(207, 200, 188)!important;
+    background-color: rgb(207, 200, 188) !important;
     height: 100px;
     display: flex;
     justify-items: center;
@@ -281,7 +337,7 @@ footer {
 }
 
 footer * {
-    background-color: rgb(207, 200, 188)!important;
+    background-color: rgb(207, 200, 188) !important;
 }
 
 footer div {
@@ -297,6 +353,20 @@ footer div {
     .game-board {
         white-space: nowrap;
     }
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    .content, .wrapper {
+        width: auto;
+        height: fit-content;
+    }
+
+
 
     #board {
         padding-top: 0;
@@ -318,6 +388,7 @@ footer div {
         vertical-align: middle;
         font-size: 30pt;
     }
+
     #stats {
         display: flex;
         justify-content: space-between;
@@ -367,6 +438,18 @@ footer div {
 
     .game-board {
         white-space: nowrap;
+    }
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    .content, .wrapper {
+        width: auto;
+        height: fit-content;
     }
 
     #board {

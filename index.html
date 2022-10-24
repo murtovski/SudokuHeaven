@@ -17,17 +17,22 @@
 
 
 <body>
-    <div class="overlay-two invisible" id="div-two">
+    <div class="overlay-two hidden" id="div-two">
         <div class="wrapper">
-            <div class="content">
-                <form action="post">
-                    <label for="first-name">First Name : </label>
-                    <input type="text" id="first-name">
-                    <label for="last-name">Last Name: </label>
-                    <input type="text" id="last-name">
-                    <button type="submit">Submit</button>
+            <div class="content" id="form-container">
+                <form>
+                    <label for="first-name" class="first-name">First Name: </label>
+                    <input type="text" id="first-name" class="name-box first-name">
+                    <br>
+                    <label for="last-name" class="last-name">Last Name:  </label>
+                    <input type="text" id="last-name" class="name-box last-name">
+                    <br>
+                    
                 </form>
+                <button id="submit-button">Submit</button>
             </div>
+            <div id="welcome" class= "hidden">Welcome <span id="full-name"></span>
+            <a href="#" class="close-welcome" id="close-welcome">Close</a></div>
         </div>
     </div>
     <!-- Header bar and logo start -->

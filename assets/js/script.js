@@ -24,9 +24,13 @@ var selectedTile;
 var disableSelect;
 
 window.onload = function () {
-
-    setInterval(3000);
-    popUp();
+    setTimeout(function(){
+        id("div-two").classList.remove("hidden");
+    }, 1000);
+    formValidate();
+    id("close-welcome").addEventListener("click", function() {
+        id("div-two").classList.add("hidden");
+    });
     //Run startgame function when button is clicked
     id("start-btn").addEventListener("click", startGame);
     //add event listener to each number and number container
@@ -268,8 +272,25 @@ function checkDone() {
     return true;
 }
 
-function popUp(){
-    qs(".div-two").classList.remove("invisible");
+function formValidate() {
+    id("submit-button").addEventListener("click", function(){
+        let firstName = id("first-name").value;
+        let lastName = id("last-name").value;
+        if(firstName === null || lastName === null){
+            alert("You must enter a valid name");
+        }
+        else if (firstName.length < 1 || lastName.length <1){
+            alert("You must enter a valid name");
+        }
+        else {
+            
+            id("form-container").classList.add("hidden");
+            setTimeout(function(){
+                id("welcome").classList.remove("hidden");
+                id("full-name").textContent = (firstName + " " + lastName);
+            }, 500);
+        }
+    });
 }
 
 
