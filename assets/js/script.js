@@ -24,6 +24,9 @@ var selectedTile;
 var disableSelect;
 
 window.onload = function () {
+
+    setInterval(3000);
+    popUp();
     //Run startgame function when button is clicked
     id("start-btn").addEventListener("click", startGame);
     //add event listener to each number and number container
@@ -264,6 +267,11 @@ function checkDone() {
     }
     return true;
 }
+
+function popUp(){
+    qs(".div-two").classList.remove("invisible");
+}
+
 
 
 

@@ -1,5 +1,7 @@
 # Sudoku Heaven
 
+## Link to deployed site: https://murtovski.github.io/SudokuHeaven/
+
 ### A website for a Sudoku game for users to play for fun
 
 
