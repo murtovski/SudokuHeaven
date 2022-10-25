@@ -88,8 +88,10 @@ h1 {
 }
 
 .first-name,
-.last-name {
+.last-name,
+.email {
     margin: 10px 20px;
+    display: inline-block;
 }
 
 form>label {
@@ -97,19 +99,24 @@ form>label {
     margin-left: 25% !important;
 }
 
-.first-name {
-    display: inline-block;
+ .first-name {
+    margin-top: 40px;
 }
 
-.last-name {
-    display: inline-block;
-}
+
 
 #welcome {
     text-align: center;
-    color: #e12727;
     font-size: 2rem;
-    margin: 20px;
+    margin: 0;
+    padding: 10%;
+    overflow: hidden;
+}
+
+#welcome > span {
+    color: #fa0202;
+    display: block;
+    font-weight: bolder;
 }
 
 #submit-button {
@@ -130,10 +137,7 @@ form>label {
     margin: 20px;
 }
 
-#welcome * {
-    display: block;
-    font-weight: bolder;
-}
+
 
 .overlay:target {
     visibility: visible;
@@ -156,7 +160,6 @@ form>label {
     text-decoration: none;
     color: #e12727;
     font-size: 1.5rem;
-    padding-top: 20px;
 }
 
 .close-welcome:hover {
@@ -361,7 +364,9 @@ footer div {
         align-items: center;
         width: auto;
     }
-    .content, .wrapper {
+
+    .content,
+    .wrapper {
         width: auto;
         height: fit-content;
     }
@@ -447,7 +452,9 @@ footer div {
         align-items: center;
         width: auto;
     }
-    .content, .wrapper {
+
+    .content,
+    .wrapper {
         width: auto;
         height: fit-content;
     }

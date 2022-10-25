@@ -276,11 +276,17 @@ function formValidate() {
     id("submit-button").addEventListener("click", function(){
         let firstName = id("first-name").value;
         let lastName = id("last-name").value;
+        let usrFirst = firstName.slice(0, 3);
+        let usrLast = lastName.slice(0, 3);
+        let username = usrFirst + usrLast;
         if(firstName === null || lastName === null){
             alert("You must enter a valid name");
         }
         else if (firstName.length < 1 || lastName.length <1){
             alert("You must enter a valid name");
+        }
+        else if (id("email").value.includes("@") === false || id("email").value.includes(".com") === false){
+            alert("You must enter a valid email");
         }
         else {
             
@@ -288,6 +294,7 @@ function formValidate() {
             setTimeout(function(){
                 id("welcome").classList.remove("hidden");
                 id("full-name").textContent = (firstName + " " + lastName);
+                id("username").textContent = username;
             }, 500);
         }
     });

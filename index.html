@@ -22,16 +22,17 @@
             <div class="content" id="form-container">
                 <form>
                     <label for="first-name" class="first-name">First Name: </label>
-                    <input type="text" id="first-name" class="name-box first-name">
+                    <input type="text" id="first-name" class="name-box first-name" required>
                     <br>
                     <label for="last-name" class="last-name">Last Name:  </label>
-                    <input type="text" id="last-name" class="name-box last-name">
+                    <input type="text" id="last-name" class="name-box last-name" required>
                     <br>
-                    
+                    <label for="email" class="email">Email: </label>
+                    <input type="email" name="email" id="email" class="name-box email" required>
                 </form>
                 <button id="submit-button">Submit</button>
             </div>
-            <div id="welcome" class= "hidden">Welcome <span id="full-name"></span>
+            <div id="welcome" class= "hidden">Welcome <span id="full-name"></span> <br> Your username is <br> <span id="username"></span>
             <a href="#" class="close-welcome" id="close-welcome">Close</a></div>
         </div>
     </div>
