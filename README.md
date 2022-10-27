@@ -135,6 +135,14 @@ The footer is a sign off for the game, again I designed the page to show and pla
 
 As with all websites, this one also has a favicon that is displayed beside the title of the page. I used a simple puzzle piece to add to the theme of the site.
 
+![user-validation](assets/images/user-validation.png)
+
+On completion of the page loading, a user login window will appear after half a second. A user will input their name and email address and press the submit button. The email must end with a .com and contain an @ character for the validation to succeed. The first and last name fields also must contain some sort of input so the validation can succeed and a username can be created.
+
+![username-creation](assets/images/username-creation.png)
+
+The input of the first and last name fields are seperated and concatenated to create a simple username once the validation is complete. This window is then closed using the "close" button and the validation is complete and the game is now ready to play.
+
 ![game-controls](assets/images/game-control.png)
 The game controls contain the different elements to control the difficulty and duration of the game. There are 3 difficulties starting at easy and 3 time settings to give the user a better chance to complete the game. I created two buttons, a start button to create a new board depending on the difficulty of the game. When this button is pressed, "new game" will flash on the board to show the user the board has been set. There is also a help button that will display a window with rules for sudoku and how to play. This can then be closed to continue the game.
 

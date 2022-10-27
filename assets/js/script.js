@@ -54,7 +54,7 @@ window.onload = function () {
             }
         });
     }
-}
+};
 
 function startGame() {
     //Choose board difficulty
@@ -63,7 +63,7 @@ function startGame() {
         id("lives").classList.remove("incorrect");
     }
     if (id("easy").checked) {
-        board = easy[0]
+        board = easy[0];
     } else if (id("medium").checked) {
         board = medium[0];
     } else board = hard[0];
@@ -113,7 +113,7 @@ function generateBoard(board) {
                     }
                 }
 
-            })
+            });
         }
         //Assign tile id
         tile.id = idCount;
@@ -125,7 +125,7 @@ function generateBoard(board) {
             tile.classList.add("bottomBorder");
         }
         if ((tile.id + 1) % 9 === 6 || (tile.id + 1) % 9 === 3) {
-            tile.classList.add("rightBorder")
+            tile.classList.add("rightBorder");
         }
         //Add tiles to board
         id("board").appendChild(tile);
@@ -181,7 +181,7 @@ function updateMove() {
                 selectedTile.textContent = "";
                 selectedTile = null;
                 selectedNum = null;
-            }, 1000)
+            }, 1000);
         }
     }
 }
@@ -194,6 +194,7 @@ function endGame() {
     if (lives === 0 || timeRemaining === 0) {
         id("lives").classList.add("incorrect");
         id("lives").textContent = "You Lost!";
+        alert("Sorry, You lose!!!")
     } else {
         id("lives").textContent = "You Won!";
     }
@@ -203,7 +204,7 @@ function checkCorrect(tile) {
     //set solution based on difficulty selection
     let solution;
     if (id("easy").checked) {
-        solution = easy[1]
+        solution = easy[1];
     } else if (id("medium").checked) {
         solution = medium[1];
     } else solution = hard[1];
@@ -251,7 +252,7 @@ function startTimer() {
         if (timeRemaining === 0) endGame();
         id("timer").textContent = "Time Remaining: " + timeConversion(timeRemaining);
         id("new-game").classList.add("hidden");
-    }, 1000)
+    }, 1000);
 
 }
 
