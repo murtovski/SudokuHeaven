@@ -168,7 +168,9 @@ For any user that is new to sudoku, I added a help window to give an outline of 
 
 [W3C CSS Validation Service](assets/images/css-validator.png) was used to validate CSS code. No errors were found. 
 
+### Javascript testing
 
+[JS Hint Service](assets/images/JShint.png) was used to check and correct my Javascript. Two warnings were given regarding functions that were declared within loops that reference and outer scope variable. More in bugs.
 
 [Back to top &uarr;](#sudoku-heaven)
 <hr>
@@ -214,6 +216,8 @@ The website was tested with many different sizes according to the web editor on 
 1. There were some bugs during deployment involving navigating the file system. It was found and the issue was fixed.
 
 2. There were many bugs during the creation of the javascript, all due to minor typos that had to be ran through and fixed.
+
+3. JS hint showed two warnings. "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics." I did not change to fix these warnings as the game fuctioned as intended regardless of the potential confusion.
 
 [Back to top &uarr;](#sudoku-heaven)
 <hr>
